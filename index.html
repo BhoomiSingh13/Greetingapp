@@ -39,6 +39,16 @@
 							return;
 						}
 
+						if (!name.value.match(/^[A-Za-z ]+$/))
+						{
+							alert("Name should contain only alphabets ");
+							msg.innerHTML = "";
+							name.value = "";
+							name.focus();
+							return;
+						}
+
+
 						let d = new Date();
 						let hr = d.getHours();
 						let ans = "";
